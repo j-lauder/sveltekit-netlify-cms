@@ -6,14 +6,38 @@ collections:
     label: routes
     folder: src/routes
     create: true
+    slug: "{{slug}}"
     fields:
       - name: title
       - name: nav_label
       - name: body
         widget: markdown
+  - name: "games"
+    label: "Games"
+    folder: "src/games"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: image_url
+        label: Image URL
+        widget: string
+      - name: description
+        label: Description
+        widget: markdown
+  - name: "categories"
+    label: "Categories"
+    folder: "src/categories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: description
+        label: Description
+        widget: markdown
 media_folder: "static/uploads"
 public_folder: "/uploads"
-
-# site_url: https://your-site.com
-# display_url: https://your-site.com
-# logo_url: https://your-site.com/images/logo.svg
